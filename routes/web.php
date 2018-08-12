@@ -11,9 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+//
+//Route::post('/', function () {
+//    print_r($_POST);
+//});
+//
+//Route::match(['get','post'],'/', function () {
+//    return view('welcome');
+//});
 
+Route::match(['get','post'],'/', 'FormController@show');
 
 Route::resource('form', 'FormController');
